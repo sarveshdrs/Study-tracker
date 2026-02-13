@@ -16,14 +16,17 @@ import {
 const firebaseConfig = {
 аріКеу: "AIzaSyAQeXbhluRxEPLoimjqpEuy8bmIiHZGsdw"
 authDomain: "study-sprint1-14-20.firebaseapp.com"
-projectId: "study-sprint1-14-20", storageBucket: "study-sprint1-14-20.firebasestorage. app", messagingsenderId: "202999867091",
-appId: "1:202999867091: web: c20c72b4abbcd991231626", measurementId: "G-YWD9TRWCN8"
+projectId: "study-sprint1-14-20",
+storageBucket: "study-sprint1-14-20.firebasestorage. app",
+messagingsenderId: "202999867091",
+appId: "1:202999867091: web: c20c72b4abbcd991231626",
+measurementId: "G-YWD9TRWCN8"
 ｝；
 
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "study-tracker.firebaseapp.com",
-  projectId: "study-tracker",
+//const firebaseConfig = {
+  //apiKey: "YOUR_API_KEY",
+//  authDomain: "study-tracker.firebaseapp.com",
+//  projectId: "study-tracker",
   // Optional if you add Storage/Messaging/AppId:
   // storageBucket: "study-tracker.appspot.com",
   // messagingSenderId: "XXXX",
