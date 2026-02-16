@@ -1,15 +1,135 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Study Tracker</title>
-  </head>
-  <body>
-    <h1>Study Tracker</h1>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Tracker</title>
 
-    <button id="login">Login with Google</button>
+  <!-- CSS for Board Layout -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
 
-    <div id="board"></div>
+    h1 {
+      text-align: center;
+    }
 
-    <script type="module" src="app.js"></script>
-  </body>
+    #tasks-section {
+      display: none;
+      margin-top: 20px;
+    }
+
+    /* Make board columns sit next to each other */
+    .board {
+      display: flex;             /* flex container lays children in a row */
+      flex-direction: row;
+      gap: 20px;                 /* space between columns */
+      justify-content: space-around;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    /* Each column style */
+    .column {
+      background: #f4f4f4;
+      padding: 10px;
+      flex: 1;                   /* each column takes equal space */
+      min-width: 180px;
+      border-radius: 5px;
+    }
+
+    .column h3 {
+      text-align: center;
+    }
+
+    .task-list {
+      list-style: none;
+      padding: 0;
+      min-height: 150px;
+    }
+
+    .task-list li {
+      background: white;
+      margin: 6px 0;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    /* Add Task form styling */
+    .new-task {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .new-task input,
+    .new-task select {
+      padding: 8px;
+      margin: 4px;
+      width: 180px;
+    }
+
+    .new-task button {
+      padding: 8px 12px;
+      margin: 4px;
+    }
+
+    input, button {
+      padding: 8px;
+      margin: 4px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <h1>Study Tracker</h1>
+
+  <!-- Auth Section -->
+  <div id="auth-section">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button id="register">Register</button>
+    <button id="login">Login</button>
+  </div>
+
+  <!-- Tasks / Board Section -->
+  <div id="tasks-section">
+
+    <!-- SCRUM BOARD -->
+    <div class="board">
+      <div class="column" id="todo-column">
+        <h3>To Do</h3>
+        <ul class="task-list" id="todo-list"></ul>
+      </div>
+
+      <div class="column" id="in-progress-column">
+        <h3>In Progress</h3>
+        <ul class="task-list" id="in-progress-list"></ul>
+      </div>
+
+      <div class="column" id="done-column">
+        <h3>Done</h3>
+        <ul class="task-list" id="done-list"></ul>
+      </div>
+    </div>
+
+    <!-- TASK FORM -->
+    <div class="new-task">
+      <input type="text" id="task-text" placeholder="New task">
+      <select id="task-status">
+        <option value="todo">To Do</option>
+        <option value="in-progress">In Progress</option>
+        <option value="done">Done</option>
+      </select>
+      <button id="add-task">Add Task</button>
+      <button id="logout">Logout</button>
+    </div>
+
+  </div>
+
+  <!-- Your app.js -->
+  <script type="module" src="app.js"></script>
+
+</body>
 </html>
